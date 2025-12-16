@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Test - ALFA SAT</title>
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.css"/>
+    <!-- Removed duplicate Merriweather font link -->
+</head>
+<body class="test-body">
+
+    <!-- The backdrop for the modal -->
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    
+    <!-- +++ ADDED: FULLSCREEN PROMPT MODAL +++ -->
+    <div class="fullscreen-prompt-container" id="fullscreen-prompt">
+        <div class="fullscreen-prompt-card">
+            <h3 id="fullscreen-prompt-title">Please Enter Fullscreen Mode</h3>
+            <p>To continue, please return to the fullscreen experience.</p>
+            <button classs="btn" id="enter-fullscreen-btn">
+                <i class="fa-solid fa-expand"></i> Enter Fullscreen
+            </button>
+            <a href="#" id="proceed-without-fullscreen">Proceed without fullscreen mode</a>
+        </div>
+    </div>
+    <!-- +++ END OF FULLSCREEN MODAL +++ -->
+    <!-- +++ ADD THIS CUSTOM SELECTION TOOLBAR +++ -->
+    <div class="selection-toolbar" id="selection-toolbar">
+        <button data-command="highlight" data-value="#FFD700" title="Highlight Yellow"><i class="fa-solid fa-highlighter" style="color: #FFD700;"></i></button>
+        <button data-command="highlight" data-value="#a0e7fd" title="Highlight Blue"><i class="fa-solid fa-highlighter" style="color: #a0e7fd;"></i></button>
+        <button data-command="highlight" data-value="#90ee90" title="Highlight Green"><i class="fa-solid fa-highlighter" style="color: #90ee90;"></i></button>
+        <button data-command="underline" title="Underline"><i class="fa-solid fa-underline"></i></button>
+        <button data-command="clearformat" title="Clear Formatting"><i class="fa-solid fa-eraser"></i></button>
+    </div>
+    <!-- +++ END OF TOOLBAR +++ -->
+
+    <div class="test-wrapper">
+        <!-- TOP HEADER -->
+        <header class="test-header">
+            <div class="header-left">
+                <img src="assets/logo.png" alt="Logo" class="logo-small">
+                <div class="test-title">
+                    <h4>Reading & Writing</h4> <!-- Dynamically updated -->
+                    <span>Module 1</span> <!-- Dynamically updated -->
+                </div>
+            </div>
+            <div class="header-center timer">
+                <i class="fa-regular fa-clock"></i>
+                <span id="timer-display">00:00</span> <!-- Added ID -->
+            </div>
+            <div class="header-right">
+                <div class="test-tools">
+                    <button class="tool-btn" title="Calculator"><i class="fa-solid fa-calculator"></i></button>
+                    <button class="tool-btn" title="Highlighter"><i class="fa-solid fa-highlighter"></i></button>
+                    <!-- Add more tools here if needed -->
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="test-main">
+            <!-- CALCULATOR CONTAINER (Absolutely Positioned) -->
+            <div class="calculator-container" id="calculator-container">
+                <div class="calculator-header" id="calculator-header">
+                    <span>Calculator</span>
+                    <div class="calc-header-buttons">
+                         <!-- ADD Maximize/Restore Button -->
+                        <button class="calc-size-toggle-btn" id="calc-size-toggle-btn" title="Maximize Calculator">
+                            <i class="fa-solid fa-expand"></i> <!-- Initial icon -->
+                        </button>
+                        <button class="close-calculator-btn" id="close-calculator-btn" title="Close Calculator">&times;</button>
+                    </div>
+                </div>
+                <!-- Iframe will be added here by JS -->
+                <!-- ADD Resize Handle -->
+                <div class="calculator-resize-handle" id="calculator-resize-handle"></div>
+            </div>
+
+            <!-- MAIN CONTENT BODY (Handles Layout Switching) -->
+            <div class="main-content-body">
+                <!-- HEADER FOR MATH (Only visible in Math Layout) -->
+                <div class="question-header-bar hidden" id="math-question-header">
+                    <div class="q-number-display"></div>
+                    <label class="mark-for-review">
+                        <input type="checkbox" class="mark-review-checkbox" data-question-id=""> <!-- data-question-id added dynamically -->
+                        <i class="fa-regular fa-flag"></i>
+                        <span>Mark for Review</span>
+                    </label>
+                </div>
+
+                <!-- STIMULUS PANE (Used in R&W, sometimes Math) -->
+                <div class="stimulus-pane">
+                    <div class="pane-content">
+                        <!-- Stimulus content loaded here -->
+                    </div>
+                </div>
+
+                <!-- QUESTION PANE (Always Visible, layout changes) -->
+                <div class="question-pane">
+                    <!-- HEADER FOR R&W (Only visible in R&W Layout) -->
+                    <div class="question-header-bar" id="rw-question-header">
+                         <div class="q-number-display"></div>
+                         <label class="mark-for-review">
+                            <input type="checkbox" class="mark-review-checkbox" data-question-id=""> <!-- data-question-id added dynamically -->
+                             <i class="fa-regular fa-flag"></i>
+                             <span>Mark for Review</span>
+                         </label>
+                    </div>
+                    <div class="pane-content">
+                        <!-- Question content loaded here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="test-footer">
+            <div class="footer-user-name" id="user-name-display">
+                Student <!-- Dynamically updated -->
+            </div>
+            <div class="footer-center">
+                <button class="question-nav-btn" id="question-nav-btn">
+                    <span>Question 1 of N</span> <!-- Dynamically updated -->
+                    <i class="fa-solid fa-chevron-up"></i>
+                </button>
+            </div>
+            <div class="footer-right">
+                <button class="btn btn-secondary">Back</button>
+                <button class="btn btn-primary">Next</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- QUESTION NAVIGATOR MODAL -->
+    <div class="question-navigator-modal" id="question-navigator-modal">
+        <div class="modal-header">
+            <h4>Section X, Module Y: Subject Questions</h4> <!-- Dynamically updated -->
+            <button class="close-modal-btn" id="close-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="modal-filters">
+            <span><i class="fa-solid fa-circle-dot current-q"></i> Current</span>
+            <span><i class="fa-regular fa-square"></i> Unanswered</span> <!-- Consider adding class/logic -->
+            <span><i class="fa-solid fa-flag for-review"></i> For Review</span>
+        </div>
+        <div class="modal-grid" id="modal-question-grid">
+            <!-- Grid numbers loaded here -->
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" id="modal-proceed-btn" style="display: none;">Continue</button>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-functions-compat.js"></script>   
+    <script src="js/firebase-init.js"></script>
+    <script src="js/main.js"></script> <!-- General site logic -->
+    <script src="js/test-engine.js"></script> <!-- Test page specific logic -->
+    <!-- Inline script removed as modal logic is now in test-engine.js -->
+
+</body>
+</html>
+
+

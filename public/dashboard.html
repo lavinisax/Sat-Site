@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ALFA SAT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!-- +++ ADDED: Font Awesome for icons +++ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="brand">
+                <img src="assets/logo.png" alt="ALFA SAT Logo" class="logo-small">
+                <span>ALFA SAT</span>
+            </div>
+            <nav>
+                <!-- +++ REPLACED Log Out link with Profile Menu +++ -->
+                <div class="profile-nav">
+                    <button class="btn-icon" id="profile-btn" title="Profile">
+                        <i class="fa-solid fa-user-circle"></i>
+                    </button>
+                    
+                    <div class="profile-menu" id="profile-menu">
+                        <div class="user-id-display-container">
+                            <label for="user-id-display">Your User ID</label>
+                            <div class="user-id-input-wrapper">
+                                <input type="text" id="user-id-display" value="Loading..." readonly>
+                                <button class="btn-icon" id="copy-uid-btn" title="Copy ID">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+                            <small>Give this ID to your admin for private test access.</small>
+                        </div>
+                        <button class="btn-logout" id="profile-logout-btn">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            Log Out
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="welcome-section">
+            <h2>Welcome back, Student!</h2>
+            <p>Ready to ace your test? Pick a practice test below to get started.</p>
+        </div>
+        
+        <div class="test-code-section">
+            <form id="test-code-form">
+                <input type="text" placeholder="Enter 6-letter test code" maxlength="6" class="test-code-input">
+                <button type="submit" class="btn btn-secondary">Start Proctored Test</button>
+            </form>
+        </div>
+
+        <div class="test-list-container">
+            <h3>Full-Length Practice Tests</h3>
+            <div class="test-grid" id="test-grid-container">
+            <!-- Test cards will be dynamically inserted here by main.js -->
+            <p>Loading available tests...</p>
+            </div>
+        </div>
+    </main>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+
+    <!-- Our Firebase initialization script -->
+    <script src="js/firebase-init.js"></script>
+
+    <!-- Our main script (must be last) -->
+    <script src="js/main.js"></script>
+</body>
+</html>

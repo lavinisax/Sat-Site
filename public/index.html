@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ALFA SAT - Your journey to a perfect SAT score starts here. Practice tests, personalized study plans, and expert strategies for EBRW and Math.">
+    <title>ALFA SAT - Master the SAT | Practice Tests & Score Improvement</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Cursor Spotlight Glow -->
+    <div class="cursor-spotlight"></div>
+
+    <!-- Background Particles -->
+    <div class="particles"></div>
+
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Floating Numbers Background -->
+    <div class="floating-numbers"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="ALFA SAT" class="logo-img">
+                <span class="logo-text">ALFA <span>SAT</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#sections">Practice Tests</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#testimonials">Success Stories</a></li>
+            </ul>
+            <a href="login.html" class="nav-cta">Start Free</a>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Trusted by 10,000+ Students</div>
+            <h1 class="hero-title">
+                Master the <span class="highlight">SAT</span><br>
+                Score Higher, Go Further
+            </h1>
+            <p class="hero-subtitle">
+                Your journey to a 1600 starts here. Practice with real SAT questions,
+                track your progress with AI-powered analytics, and unlock your dream college.
+            </p>
+            <div class="hero-cta-group">
+                <a href="login.html" class="btn-primary">
+                    <span>🚀</span> Start Practice Test
+                </a>
+                <a href="#how-it-works" class="btn-secondary">
+                    <span>▶️</span> Watch Demo
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1600">1600</span>
+                    <span class="stat-label">Perfect Score Target</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5000">5000+</span>
+                    <span class="stat-label">Practice Questions</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="200">200+</span>
+                    <span class="stat-label">Avg. Score Improvement</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAT Sections -->
+    <section class="sat-sections" id="sections">
+        <div class="section-header">
+            <span class="section-tag">SAT Sections</span>
+            <h2 class="section-title">Master Every Section of the SAT</h2>
+            <p class="section-subtitle">
+                Focused practice for Reading, Writing, and Math. Each section tailored to help you
+                understand patterns and excel on test day.
+            </p>
+        </div>
+
+        <div class="sections-grid">
+            <!-- Reading Section -->
+            <div class="section-card reading animate-on-scroll">
+                <div class="card-icon">📖</div>
+                <h3 class="card-title">Reading</h3>
+                <p class="card-description">
+                    Master passage analysis, evidence-based reading, and vocabulary in context.
+                    Practice with literature, history, science, and social studies passages.
+                </p>
+                <div class="card-stats">
+                    <div class="card-stat">
+                        <span>📝</span>
+                        <strong>52</strong> Questions
+                    </div>
+                    <div class="card-stat">
+                        <span>⏱️</span>
+                        <strong>65</strong> Minutes
+                    </div>
+                </div>
+            </div>
+
+            <!-- Writing Section -->
+            <div class="section-card writing animate-on-scroll">
+                <div class="card-icon">✍️</div>
+                <h3 class="card-title">Writing & Language</h3>
+                <p class="card-description">
+                    Improve grammar, sentence structure, and rhetorical skills. Learn to identify
+                    errors and strengthen passages like a pro editor.
+                </p>
+                <div class="card-stats">
+                    <div class="card-stat">
+                        <span>📝</span>
+                        <strong>44</strong> Questions
+                    </div>
+                    <div class="card-stat">
+                        <span>⏱️</span>
+                        <strong>35</strong> Minutes
+                    </div>
+                </div>
+            </div>
+
+            <!-- Math No Calculator -->
+            <div class="section-card math animate-on-scroll">
+                <div class="card-icon">🧮</div>
+                <h3 class="card-title">Math (No Calculator)</h3>
+                <p class="card-description">
+                    Build mental math skills and algebraic fluency. Practice solving equations,
+                    working with expressions, and problem-solving without a calculator.
+                </p>
+                <div class="card-stats">
+                    <div class="card-stat">
+                        <span>📝</span>
+                        <strong>20</strong> Questions
+                    </div>
+                    <div class="card-stat">
+                        <span>⏱️</span>
+                        <strong>25</strong> Minutes
+                    </div>
+                </div>
+            </div>
+
+            <!-- Math Calculator -->
+            <div class="section-card math-calc animate-on-scroll">
+                <div class="card-icon">📊</div>
+                <h3 class="card-title">Math (Calculator)</h3>
+                <p class="card-description">
+                    Tackle advanced math, data analysis, and complex word problems.
+                    Master functions, statistics, and geometry with calculator strategies.
+                </p>
+                <div class="card-stats">
+                    <div class="card-stat">
+                        <span>📝</span>
+                        <strong>38</strong> Questions
+                    </div>
+                    <div class="card-stat">
+                        <span>⏱️</span>
+                        <strong>55</strong> Minutes
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <span class="section-tag">Why ALFA SAT</span>
+            <h2 class="section-title">Everything You Need to Succeed</h2>
+            <p class="section-subtitle">
+                Powerful tools designed to maximize your study time and boost your score.
+            </p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">Real SAT Questions</h3>
+                <p class="feature-description">
+                    Practice with authentic SAT-style questions modeled after official College Board tests.
+                    Experience the real test format.
+                </p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">📈</div>
+                <h3 class="feature-title">Score Analytics</h3>
+                <p class="feature-description">
+                    Track your progress with detailed performance analytics. See your strengths,
+                    identify weaknesses, and watch your score improve.
+                </p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">🤖</div>
+                <h3 class="feature-title">AI-Powered Learning</h3>
+                <p class="feature-description">
+                    Smart algorithms adapt to your skill level, serving questions that challenge
+                    you just right for maximum improvement.
+                </p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">⏰</div>
+                <h3 class="feature-title">Timed Practice</h3>
+                <p class="feature-description">
+                    Build test-day stamina with realistic timing. Practice managing your time
+                    effectively across all sections.
+                </p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">📚</div>
+                <h3 class="feature-title">Detailed Explanations</h3>
+                <p class="feature-description">
+                    Learn from every question with step-by-step explanations. Understand not just
+                    the answer, but the reasoning behind it.
+                </p>
+            </div>
+
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">🏆</div>
+                <h3 class="feature-title">Score Guarantee</h3>
+                <p class="feature-description">
+                    We're confident in our method. Study consistently with ALFA SAT and see
+                    measurable improvement in your score.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="roadmap" id="how-it-works">
+        <div class="section-header">
+            <span class="section-tag">How It Works</span>
+            <h2 class="section-title">Your Path to SAT Success</h2>
+            <p class="section-subtitle">
+                A proven 4-step process to maximize your SAT score.
+            </p>
+        </div>
+
+        <div class="roadmap-container">
+            <div class="roadmap-line"></div>
+
+            <div class="roadmap-item animate-on-scroll">
+                <div class="roadmap-dot">1</div>
+                <div class="roadmap-content">
+                    <h3 class="roadmap-title">Take a Diagnostic Test</h3>
+                    <p class="roadmap-text">
+                        Start with a full-length practice test to assess your current level.
+                        We'll identify your baseline score and pinpoint areas for improvement.
+                    </p>
+                </div>
+            </div>
+
+            <div class="roadmap-item animate-on-scroll">
+                <div class="roadmap-dot">2</div>
+                <div class="roadmap-content">
+                    <h3 class="roadmap-title">Get Your Personalized Plan</h3>
+                    <p class="roadmap-text">
+                        Based on your diagnostic results, receive a customized study plan
+                        targeting your weakest areas while reinforcing your strengths.
+                    </p>
+                </div>
+            </div>
+
+            <div class="roadmap-item animate-on-scroll">
+                <div class="roadmap-dot">3</div>
+                <div class="roadmap-content">
+                    <h3 class="roadmap-title">Practice with Purpose</h3>
+                    <p class="roadmap-text">
+                        Work through targeted practice sets, learn strategies, and review
+                        explanations. Track your progress as you improve day by day.
+                    </p>
+                </div>
+            </div>
+
+            <div class="roadmap-item animate-on-scroll">
+                <div class="roadmap-dot">4</div>
+                <div class="roadmap-content">
+                    <h3 class="roadmap-title">Ace the SAT</h3>
+                    <p class="roadmap-text">
+                        Walk into test day confident and prepared. Apply your skills, trust
+                        your training, and achieve the score you've worked for.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <span class="section-tag">Success Stories</span>
+            <h2 class="section-title">Students Who Made It Happen</h2>
+            <p class="section-subtitle">
+                Real results from real students who transformed their SAT scores.
+            </p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-score">
+                    <span class="score-badge">+250 points</span>
+                    <span>1180 → 1430</span>
+                </div>
+                <p class="testimonial-text">
+                    "ALFA SAT's practice tests were so close to the real thing. The detailed
+                    explanations helped me understand my mistakes and avoid them on test day."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SA</div>
+                    <div class="author-info">
+                        <h4>Sardor Aliyev</h4>
+                        <span>Accepted to UT Austin</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-score">
+                    <span class="score-badge">+320 points</span>
+                    <span>1100 → 1420</span>
+                </div>
+                <p class="testimonial-text">
+                    "I struggled with the math section, but the targeted practice sets helped me
+                    build confidence. Went from dreading math to actually enjoying it!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">NK</div>
+                    <div class="author-info">
+                        <h4>Nodira Karimova</h4>
+                        <span>Accepted to UCLA</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-score">
+                    <span class="score-badge">+280 points</span>
+                    <span>1200 → 1480</span>
+                </div>
+                <p class="testimonial-text">
+                    "The reading strategies changed everything for me. I learned how to attack
+                    passages efficiently and manage my time. Highly recommend ALFA SAT!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JR</div>
+                    <div class="author-info">
+                        <h4>Jasur Rahimov</h4>
+                        <span>Accepted to Georgia Tech</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Transform Your SAT Score?</h2>
+            <p class="cta-subtitle">
+                Join thousands of students who have already improved their scores.
+                Start your free practice test today and see the difference.
+            </p>
+            <a href="login.html" class="btn-primary">
+                <span>🎯</span> Start Your Free Test Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">ALFA <span>SAT</span></a>
+                <p>Your journey to a better score starts here. Practice smarter, score higher, and unlock your dream
+                    college.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Practice</h4>
+                <ul>
+                    <li><a href="#sections">Reading</a></li>
+                    <li><a href="#sections">Writing & Language</a></li>
+                    <li><a href="#sections">Math</a></li>
+                    <li><a href="#">Full Tests</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Study Guide</a></li>
+                    <li><a href="#">SAT Tips</a></li>
+                    <li><a href="#">Score Calculator</a></li>
+                    <li><a href="#">College Prep</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 ALFA SAT. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="Telegram">✈️</a>
+                <a href="#" aria-label="YouTube">▶️</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
