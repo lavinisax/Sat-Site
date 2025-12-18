@@ -43,7 +43,16 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-dark) 100%);
+  background:
+    /* Dot grid pattern */
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0),
+    /* Gradient mesh */
+    radial-gradient(ellipse at 20% 0%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(225, 61, 61, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(0, 123, 255, 0.04) 0%, transparent 60%),
+    /* Base gradient */
+    linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-dark) 100%);
+  background-size: 24px 24px, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
   background-attachment: fixed;
   color: var(--text-primary);
   min-height: 100vh;
